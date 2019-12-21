@@ -73,3 +73,22 @@ save provides the mechanism for saving the object to a more permanent space. Any
 If the _space property is set in the object, that will be the space saved to.
 
 If space name is provided, it will set _space and save to that space.
+
+### create space
+
+    create space [space name]
+
+create space provides a built-in mechanism for creating a new space. A space is an object and can be manipulated like one.
+
+### save space
+
+    save space [space name]
+
+Spaces are initially stored in local memory. save space will save the space elsewhere. The metadata on a space will determine where it is saved.
+
+### Metadata
+
+Space methods will react to the following metadata:
+
+    source - where the space is saved.
+
