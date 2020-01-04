@@ -10,9 +10,10 @@ The basics of the language will focus on object manipulation. The next section w
 
 ### create
 
+    create
     create [id]
 
-create is the most standard item in the language. Use this to create an object. The passed id will be included in the object as the _id attribute. Create will put the created object on the locally-defined space.
+create is the most standard item in the language. Use this to create an object. The passed id will be included in the object as the _id attribute. Create will put the created object on the locally-defined space. If no id is passed, then it will be automatically generated using a timestamp.
 
 There are no guardrails on the create command. Any id can be used, and all created objects will be standard and basic.
 
@@ -38,12 +39,19 @@ unset provides the mechanism for removing the property or object from the local 
 
 ### rename
 
-   rename [prop name] [new name]
-   rename [prop name] [new name] [object id]
-   rename [prop name] to [new name]
-   rename [prop name] to [new name] in [object id]
+    rename [prop name] [new name]
+    rename [prop name] [new name] [object id]
+    rename [prop name] to [new name]
+    rename [prop name] to [new name] in [object id]
 
 rename provides the ability to change a property name. When an object is passed, it will change the name for that object. When it is not, it will change it in the local space.
+
+### clone
+
+    clone [object name]
+    clone [object name] [new name]
+
+clone provides the ability to copy one object into another. When no object id is passed, one will automatically be generated using a timestamp.
 
 ### Strings, Numbers, and Objects
 
