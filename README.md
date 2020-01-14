@@ -69,7 +69,57 @@ There are several words that can be used in between properties in commands to ma
 
 Any name without quotes and that is not a transition word can be translated in several different ways. First, it will look to see if there is an associated value in the local space. If there is not, it will convert it to a string.
 
-## The Basics of Spaces
+## Math
+
+### add
+
+    add [num1] [num2] [name]
+    add [num1] to [num2] as [name]
+    add [num1] to [num2] as [object pointer]
+
+add takes two numbers and adds them together. The result will be stored in the local space for the given name. Instead of using a name of a variable, you can define a path to an object property that will receive the result.
+
+### subtract
+
+    subtract [num1] [num2] [name]
+    subtract [num1] from [num2] as [name]
+    subtract [num1] from [num2] as [object pointer]
+
+subtract takes two numbers and subtracts them. The result will be stored in the local space for the given name. Instead of using a name of a variable, you can define a path to an object property that will receive the result.
+
+### multiply
+
+    multiply [num1] [num2] [name]
+    multiply [num1] [num2] as [name]
+    multiply [num1] [num2] as [object pointer]
+
+multiply takes two numbers and multiplies them. The result will be stored in the local space for the given name. Instead of using a name of a variable, you can define a path to an object property that will receive the result.
+
+### divide
+
+    divide [num1] [num2] [name]
+    divide [num1] from [num2] as [name]
+    divide [num1] from [num2] as [object pointer]
+
+divide takes two numbers and divides them. The result will be stored in the local space for the given name. Instead of using a name of a variable, you can define a path to an object property that will receive the result.
+
+### remainder
+
+    remainder [num1] [num2] [name]
+    remainder [num1] from [num2] as [name]
+    remainder [num1] from [num2] as [object pointer]
+
+remainder takes two numbers, divides them, and gets the remainder. The result will be stored in the local space for the given name. Instead of using a name of a variable, you can define a path to an object property that will receive the result.
+
+### random
+
+    random [num1] [num2] [name]
+    random [num1] [num2] as [name]
+    random [num1] [num2] as [object pointer]
+
+random takes two numbers and returns a random number between them. The result will be stored in the local space for the given name. Instead of using a name of a variable, you can define a path to an object property that will receive the result.
+
+## Spaces
 
 ### save
 
