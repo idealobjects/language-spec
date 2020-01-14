@@ -90,8 +90,8 @@ subtract takes two numbers and subtracts them. The result will be stored in the 
 ### multiply
 
     multiply [num1] [num2] [name]
-    multiply [num1] [num2] as [name]
-    multiply [num1] [num2] as [object pointer]
+    multiply [num1] by [num2] as [name]
+    multiply [num1] by [num2] as [object pointer]
 
 multiply takes two numbers and multiplies them. The result will be stored in the local space for the given name. Instead of using a name of a variable, you can define a path to an object property that will receive the result.
 
