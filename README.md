@@ -71,6 +71,8 @@ Any name without quotes and that is not a transition word can be translated in s
 
 ## Math
 
+The descriptions for the math methods are all below. Some of these mechanisms will work with strings as well. Look under Strings to find more.
+
 ### add
 
     add [num1] [num2] [name]
@@ -118,6 +120,23 @@ remainder takes two numbers, divides them, and gets the remainder. The result wi
     random [num1] [num2] as [object pointer]
 
 random takes two numbers and returns a random number between them. The result will be stored in the local space for the given name. Instead of using a name of a variable, you can define a path to an object property that will receive the result.
+
+## Strings
+
+### add / concat
+
+    add [string1] [string2] [name]
+    add [string1] [string2] [object pointer]
+    concat [string1] [string2] [name]
+    concat [string1] [string2] [object pointer]
+
+add creates one string out of two when two strings are passed. When add is done with two numbers, it will perform the math version of add.
+
+concat creates one string out of two as well. all values will be considered strings, so passing two numbers will connect them as a string.
+
+### subtract
+
+## Logic
 
 ## Spaces
 
