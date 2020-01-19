@@ -136,7 +136,40 @@ concat creates one string out of two as well. all values will be considered stri
 
 ### subtract
 
+### replace
+
+### contains
+
 ## Logic
+
+### test
+
+    test [value] [opersation] [value] [as]
+    test [value] [opersation] [value] [value] [as]
+    test [value] equals [value] as [name | pointer]
+    test [value] less [value] as [name | pointer]
+    test [value] less equal [value] as [name | pointer]
+    test [value] greater [value] as [name | pointer]
+    test [value] greater equal [value] as [name | pointer]
+    test [value] between [value] and [value] as [name | pointer]
+    test [boolean] and [boolean] as [name | pointer]
+    test [boolean] or [boolean] as [name | pointer]
+
+test is the primary operation used to run logic commands. it lets you test if two values are equal, greater, and less than. It also provides AND and OR gates to perforam advanced tests on boolean values.
+
+Each call to test requires a separate call -- there is no way to chain calls together. This keeps the language simpler. It also promotes separation of complex checks. The best practice will be to put complex boolean checks in a block.
+
+You do not have to pass an AS value if you are just checking the operation. It will output a value that can be read from as an event.
+
+### when
+
+    when [boolean] [string operation]
+   
+when is used to call a specific gram/operation when the passed boolean is true. when expects the boolean to be pre-calculated.
+
+Both " and ` can be used when definine the string opersation. This depends on what might need to be escaped in your string.
+
+It is suggested that you use ` unless you have a specific reason not to.
 
 ## Spaces
 
