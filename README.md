@@ -136,9 +136,25 @@ concat creates one string out of two as well. all values will be considered stri
 
 ### subtract
 
+    subtract [string1] [string2] [name | pointer]
+    
+subtract, when given one or two strings, will remove the matchd string2 if it is in string1.
+
 ### replace
 
+    replace [match] [string] [replacement] [name | pointer]
+    replace [match] in [string] with [replacement] as [name | pointer]
+
+replace will look for a match in the provided string. If it exists, it will replace it with the replacement. The result is saved to the provided name or pointer.
+
 ### contains
+
+    contains [string] [value] as [name | pointer]
+    test [value] contains [value] as [name | pointer]
+    
+contains prvides a way to check if one string is in another. This will set the provided name as a boolean value representing if the string is found.
+
+You can use the logical test operation to perform the same action. contains is a shorthand for the test call.
 
 ## Logic
 
@@ -151,6 +167,7 @@ concat creates one string out of two as well. all values will be considered stri
     test [value] less equal [value] as [name | pointer]
     test [value] greater [value] as [name | pointer]
     test [value] greater equal [value] as [name | pointer]
+    test [value] contains [value] as [name | pointer]
     test [value] between [value] and [value] as [name | pointer]
     test [boolean] and [boolean] as [name | pointer]
     test [boolean] or [boolean] as [name | pointer]
